@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { BookOpen, HelpCircle } from "lucide-react";
 import ToggleSidebar from "../common/ToggleSidebar";
+import { ThemeToggle } from "../common/ThemeToggle";
 
 export default function Header() {
   return (
@@ -26,6 +27,7 @@ export default function Header() {
             <HelpCircle size={20} strokeWidth={1.39} />
             <span>Support</span>
           </Link>
+          <ThemeToggle />
         </div>
         <div className="flex items-center">
           <img 
