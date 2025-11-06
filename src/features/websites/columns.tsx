@@ -18,13 +18,13 @@ export const columns: ColumnDef<Website>[] = [
   {
     id: "#",
     header: "#",
-    cell: ({ row }) => <div className="text-gray-600">{row.index + 1}</div>,
+    cell: ({ row }) => <div className="text-gray-600 text-sm">{row.index + 1}</div>,
   },
   {
     accessorKey: "name",
     header: "Name",
     cell: ({ row }) => (
-      <div className="font-medium text-gray-900">{row.getValue("name")}</div>
+      <div className="font-medium text-gray-900 min-w-[150px]">{row.getValue("name")}</div>
     ),
   },
   {
@@ -33,9 +33,9 @@ export const columns: ColumnDef<Website>[] = [
     cell: ({ row }) => {
       const domain = row.getValue("domain") as string;
       return (
-        <div className="flex items-center gap-2 text-gray-600">
-          {domain}
-          <a href="#" className="text-blue-600 hover:text-blue-700">
+        <div className="flex items-center gap-2 text-gray-600 min-w-[200px]">
+          <span className="truncate max-w-[180px]">{domain}</span>
+          <a href="#" className="text-blue-600 hover:text-blue-700 shrink-0">
             <svg
               className="w-4 h-4"
               fill="none"
@@ -61,7 +61,7 @@ export const columns: ColumnDef<Website>[] = [
     cell: ({ row }: any) => {
       const gateways = row.getValue("paymentGateways") as string[];
       return (
-        <div className="text-gray-600">
+        <div className="text-gray-600 min-w-[150px]">
           {gateways.length > 0 ? gateways.join(", ") : "-"}
         </div>
       );
@@ -73,7 +73,7 @@ export const columns: ColumnDef<Website>[] = [
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     cell: ({ row }: any) => {
       const apiKey = row.getValue("apiKey") as string;
-      return <div className="font-mono text-sm text-gray-600">{apiKey}</div>;
+      return <div className="font-mono text-sm text-gray-600 min-w-[180px] truncate max-w-[220px]">{apiKey}</div>;
     },
   },
   {
@@ -85,7 +85,7 @@ export const columns: ColumnDef<Website>[] = [
       const isActive = status === "Active";
       return (
         <div
-          className={`inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium ${
+          className={`inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium whitespace-nowrap ${
             isActive ? "bg-green-100 text-green-700" : "bg-red-100 text-red-700"
           }`}
         >
@@ -103,11 +103,11 @@ export const columns: ColumnDef<Website>[] = [
     id: "actions",
     header: "Actions",
     cell: () => (
-      <div className="flex items-center gap-3">
-        <Button className="text-[#859094] hover:text-[#363b3d] transition-colors">
+      <div className="flex items-center gap-2 sm:gap-3">
+        <Button className="text-[#859094] hover:text-[#363b3d] transition-colors p-2 h-auto">
           <Edit className="w-4 h-4" />
         </Button>
-        <Button className="text-red-600 hover:text-red-700 transition-colors">
+        <Button className="text-red-600 hover:text-red-700 transition-colors p-2 h-auto">
           <Trash2 className="w-4 h-4" />
         </Button>
       </div>

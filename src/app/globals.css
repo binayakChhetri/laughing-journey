@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -61,6 +62,8 @@
   --color-neutral-10: var(--neutral-10);
   --color-purple: var(--purple);
   --color-white: var(--white);
+  --color-error: var(--error);
+  --color-helper-text: var(--helper-text);
 }
 
 :root {
@@ -92,6 +95,8 @@
   
   --purple: #5f47f6;
   --white: #ffffff;
+  --error: #f04438;
+  --helper-text: #859094;
 
   --foreground: oklch(0.129 0.042 264.695);
   --card: oklch(1 0 0);
@@ -154,6 +159,8 @@
   
   --purple: #7e6ef8;
   --white: #0f1d23;
+  --error: #f87171;
+  --helper-text: #a8b2b6;
 
   --card: oklch(0.208 0.042 265.755);
   --card-foreground: oklch(0.984 0.003 247.858);

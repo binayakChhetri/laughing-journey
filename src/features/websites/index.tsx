@@ -1,5 +1,6 @@
 import Heading from "@/components/common/Heading";
-import { columns, Website } from "./columns";
+import { columns } from "./columns";
+import type { Website } from "./columns";
 
 import { WebsitesClient } from "./websites-client";
 
@@ -45,7 +46,7 @@ const Websites = async () => {
   const data = await getData();
 
   return (
-    <div>
+    <div className="px-4 sm:px-6 lg:px-8 py-4 sm:py-6">
       <Heading
         title="Websites"
         subTitle="Manage your WordPress sites and their payment settings"
