@@ -28,7 +28,11 @@ export default function Header() {
           </Link>
         </div>
         <div className="flex items-center">
-          <div className="w-10 h-10 rounded-full bg-linear-to-br from-[#667eea] to-[#764ba2]" />
+          <img 
+            src="/avatar-user.png" 
+            alt="User avatar" 
+            className="w-10 h-10 rounded-full object-cover"
+          />
         </div>
       </div>
     </header>
