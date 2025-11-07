@@ -22,6 +22,8 @@ const PaymentGatewayConfig = ({
   const paymentNameCapitalized =
     paymentName.charAt(0).toUpperCase() + paymentName.slice(1);
 
+  console.log(paymentConfigSchema);
+
   return (
     <div>
       <div className="flex justify-between items-end">
@@ -45,7 +47,10 @@ const PaymentGatewayConfig = ({
           </Link>
         </div>
       </div>
-      <ConfigurationForm configSchema={paymentConfigSchema} />
+      <ConfigurationForm
+        configSchema={paymentConfigSchema}
+        paymentName={paymentName}
+      />
       {/* <LoginFormExample /> */}
     </div>
   );

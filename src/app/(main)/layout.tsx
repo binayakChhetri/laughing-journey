@@ -13,7 +13,9 @@ export default function DashboardLayout({
       <AppSidebar />
       <div className="flex-1 flex flex-col bg-secondary-background">
         <Header />
-        <main className="w-full max-w-6xl mx-auto flex-1 py-8">{children}</main>
+        <main className="w-full max-w-7xl mx-auto flex-1 py-8 px-8">
+          {children}
+        </main>
       </div>
     </SidebarProvider>
   );

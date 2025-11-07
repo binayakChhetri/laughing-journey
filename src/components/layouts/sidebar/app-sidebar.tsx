@@ -83,6 +83,7 @@ const bottomItems = [
 
 export function AppSidebar() {
   const pathname = usePathname();
+  console.log(pathname.startsWith("/payment-gateways"));
   const { state, open } = useSidebar();
 
   return (
@@ -104,7 +105,7 @@ export function AppSidebar() {
       <SidebarContent>
         <SidebarMenu className="flex-1 py-8 px-4 flex flex-col gap-4 overflow-hidden">
           {menuItems.map((item) => {
-            const isActive = pathname === item.url;
+            const isActive = pathname.startsWith(item.url);
             const Icon = item.icon;
             return (
               <SidebarMenuItem
