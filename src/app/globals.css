@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -44,6 +45,25 @@
 
   /* Custom variables */
   --color-secondary-background: var(--secondary-background);
+  --color-success: var(--success);
+  --color-success-light: var(--success-light);
+  --color-success-border: var(--success-border);
+  --color-success-dark: var(--success-dark);
+  --color-warning: var(--warning);
+  --color-warning-light: var(--warning-light);
+  --color-warning-border: var(--warning-border);
+  --color-warning-dark: var(--warning-dark);
+  --color-info: var(--info);
+  --color-pink: var(--pink);
+  --color-neutral-100: var(--neutral-100);
+  --color-neutral-80: var(--neutral-80);
+  --color-neutral-60: var(--neutral-60);
+  --color-neutral-20: var(--neutral-20);
+  --color-neutral-10: var(--neutral-10);
+  --color-purple: var(--purple);
+  --color-white: var(--white);
+  --color-error: var(--error);
+  --color-helper-text: var(--helper-text);
 }
 
 :root {
@@ -52,6 +72,31 @@
   /* Custom varibales */
   --background: #ffffff;
   --secondary-background: #13181a0f;
+
+  /* Dashboard color variables */
+  --success: #17b26a;
+  --success-light: #ecfdf3;
+  --success-border: #abefc6;
+  --success-dark: #067647;
+  
+  --warning: #ef6820;
+  --warning-light: #fef6ee;
+  --warning-border: #f9dbaf;
+  --warning-dark: #b93815;
+  
+  --info: #4588ca;
+  --pink: #e456a4;
+  
+  --neutral-100: #0f1d23;
+  --neutral-80: #13181a;
+  --neutral-60: #566267;
+  --neutral-20: #e3e6e7;
+  --neutral-10: #f1f3f5;
+  
+  --purple: #5f47f6;
+  --white: #ffffff;
+  --error: #f04438;
+  --helper-text: #859094;
 
   --foreground: oklch(0.129 0.042 264.695);
   --card: oklch(1 0 0);
@@ -88,14 +133,41 @@
 }
 
 .dark {
-  --background: oklch(0.129 0.042 264.695);
-  --foreground: oklch(0.984 0.003 247.858);
+  --background: #0f1d23;
+  --secondary-background: #1a2a31;
+  --foreground: #f1f3f5;
+  
+  /* Dashboard color variables - keep same in dark mode */
+  --success: #17b26a;
+  --success-light: #0d3a23;
+  --success-border: #067647;
+  --success-dark: #abefc6;
+  
+  --warning: #ef6820;
+  --warning-light: #3a2010;
+  --warning-border: #b93815;
+  --warning-dark: #f9dbaf;
+  
+  --info: #4588ca;
+  --pink: #e456a4;
+  
+  --neutral-100: #f1f3f5;
+  --neutral-80: #e3e6e7;
+  --neutral-60: #a8b2b6;
+  --neutral-20: #2a3a42;
+  --neutral-10: #1f2d34;
+  
+  --purple: #7e6ef8;
+  --white: #0f1d23;
+  --error: #f87171;
+  --helper-text: #a8b2b6;
+
   --card: oklch(0.208 0.042 265.755);
   --card-foreground: oklch(0.984 0.003 247.858);
   --popover: oklch(0.208 0.042 265.755);
   --popover-foreground: oklch(0.984 0.003 247.858);
-  --primary: oklch(0.929 0.013 255.508);
-  --primary-foreground: oklch(0.208 0.042 265.755);
+  --primary: #7e6ef8;
+  --primary-foreground: #f1f3f5;
   --secondary: oklch(0.279 0.041 260.031);
   --secondary-foreground: oklch(0.984 0.003 247.858);
   --muted: oklch(0.279 0.041 260.031);
@@ -111,7 +183,7 @@
   --chart-3: oklch(0.769 0.188 70.08);
   --chart-4: oklch(0.627 0.265 303.9);
   --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.208 0.042 265.755);
+  --sidebar: #1a2a31;
   --sidebar-foreground: oklch(0.984 0.003 247.858);
   --sidebar-primary: oklch(0.488 0.243 264.376);
   --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
@@ -140,4 +212,84 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Typography utilities */
+@utility heading-lg {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  color: var(--color-neutral-100);
+}
+
+@utility heading-md {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  color: var(--color-neutral-100);
+}
+
+@utility heading-sm {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  color: var(--color-neutral-100);
+}
+
+@utility heading-xs {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: var(--color-neutral-100);
+}
+
+@utility body-md {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--color-neutral-60);
+}
+
+@utility body-sm {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: var(--color-neutral-60);
+}
+
+@utility body-sm-medium {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: var(--color-neutral-100);
+}
+
+@utility body-sm-semibold {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  color: var(--color-neutral-100);
+}
+
+@utility label-sm {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+@utility label-xs {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 16px;
+  color: var(--color-neutral-100);
 }
