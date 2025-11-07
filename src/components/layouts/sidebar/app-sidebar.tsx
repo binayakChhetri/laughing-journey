@@ -111,7 +111,7 @@ export function AppSidebar() {
               <SidebarMenuItem
                 key={item.label}
                 className={cn(
-                  "font-semibold p-1 text-sm text-primary-foreground rounded-xl min-w-10 group/sidebar-item hover:bg-[#F6F6F6]  transition-colors",
+                  "font-semibold p-1 text-sm text-primary-foreground rounded-xl min-w-10 group/sidebar-item hover:bg-[#aa91fc]  transition-colors",
                   isActive && "bg-primary text-white hover:bg-primary"
                 )}
               >
